@@ -179,11 +179,57 @@ Use the getAverageWordLength function below to do the following:
     3. Return the average number of words per item in the array
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
-
-function getAverageWordLength(/*code here*/){
-    /*code here*/
+function countWords(string){
+    var wordCount = 1;
+    for(let i=0;i<string.length;i++){
+        if(string[i]===" "){
+            var wordCount = wordCount+1;
+        }
+    }
+    return wordCount;
 }
 
+function getAverageWordLength(array){
+    const wordsArr = [];
+    for(let i=0;i<array.length;i++){
+        wordsArr.push(countWords(array[i]));
+    }
+    return 
+}
+/* 👀 This is your data ⬇ */
+// const originalFlavors = [
+//     "Banana Nut Fudge",
+//     "Black Walnut",
+//     "Burgundy Cherry",
+//     "Butterscotch Ribbon",
+//     "Cherry Macaron",
+//     "Chocolate",
+//     "Chocolate Almond",
+//     "Chocolate Chip",
+//     "Chocolate Fudge",
+//     "Chocolate Mint",
+//     "Chocolate Ribbon",
+//     "Coffee",
+//     "Coffee Candy",
+//     "Date Nut",
+//     "Eggnog",
+//     "French Vanilla",
+//     "Green Mint Stick",
+//     "Lemon Crisp",
+//     "Lemon Custard",
+//     "Lemon Sherbet",
+//     "Maple Nut",
+//     "Orange Sherbet",
+//     "Peach",
+//     "Peppermint Fudge Ribbon",
+//     "Peppermint Stick",
+//     "Pineapple Sherbet",
+//     "Raspberry Sherbet",
+//     "Rocky Road",
+//     "Strawberry",
+//     "Vanilla",
+//     "Vanilla Burnt Almond"
+// ]
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
