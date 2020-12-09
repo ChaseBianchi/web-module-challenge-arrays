@@ -194,8 +194,11 @@ function getAverageWordLength(array){
     for(let i=0;i<array.length;i++){
         wordsArr.push(countWords(array[i]));
     }
-    return 
+    return wordsArr.reduce(function(a,b){
+      return a+b;
+    },0);
 }
+
 /* 👀 This is your data ⬇ */
 // const originalFlavors = [
 //     "Banana Nut Fudge",
